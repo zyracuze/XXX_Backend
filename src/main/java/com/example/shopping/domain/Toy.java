@@ -16,6 +16,7 @@ public class Toy implements Serializable {
     private String age;
     private double price;
     private String availability;
+    private String name;
     @Transient
     private int quantity;
 
@@ -73,6 +74,14 @@ public class Toy implements Serializable {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
