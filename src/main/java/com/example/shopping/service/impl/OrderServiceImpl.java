@@ -1,14 +1,13 @@
 package com.example.shopping.service.impl;
 
+import com.example.shopping.domain.OrderDetails;
 import com.example.shopping.domain.Orders;
 import com.example.shopping.domain.OrderItems;
 import com.example.shopping.domain.Toy;
 import com.example.shopping.repository.OrderItemsRepository;
-import com.example.shopping.repository.ToyRepository;
 import com.example.shopping.repository.OrdersRepository;
 import com.example.shopping.service.OrderService;
 
-import java.util.List;
 
 public class OrderServiceImpl implements OrderService{
 
@@ -22,11 +21,11 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public boolean saveOrder(Orders orders, List<Toy> toyList) {
+    public boolean saveOrder(OrderDetails orderDetails) {
 
-        Orders saveOrder = ordersRepository.save(orders);
+        Orders saveOrder = ordersRepository.save(orderDetails.getOrders());
 
-        for (Toy toy : toyList) {
+        for (Toy toy : orderDetails.getToyList()) {
             OrderItems orderItems = new OrderItems();
             orderItems.setOrder_id(saveOrder.getId());
             orderItems.setProduct_id(toy.getId());
