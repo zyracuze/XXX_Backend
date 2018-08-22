@@ -1,5 +1,6 @@
 package com.example.shopping;
 
+import com.example.shopping.domain.Toy;
 import com.example.shopping.repository.ToyRepository;
 import com.example.shopping.service.impl.ProductServiceImpl;
 import org.assertj.core.api.Assertions;
