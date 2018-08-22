@@ -34,13 +34,13 @@
 					"raw": "{\n\t\"orders\": {\n\t\t\"full_name\" : \"BHAJAN PREET SINGH\",\n\t\t\"address1\" : \"WING-3, 101, KHARADI\",\n\t\t\"address2\" : \"PUNE\",\n\t\t\"city\" : \"PUNE\",\n\t\t\"province\" : \"MAHARASHTRA\",\n\t\t\"post_code\" : \"4110014\"\n\t},\n\t\"toyList\":[{ \"id\" : 15,\n\t\"brand\" : \"CoolKidz\",\n\t\"gender\" : \"Male\",\n\t\"age\" : \"over8\",\n\t\"price\" : 24.95,\n\t\"availability\" : \"InStock\",\n\t\"quantity\" : 1\n\t},\n\t{ \n\t\t\"id\" : 16,\n\t\"brand\" : \"GeekToys\",\n\t\"gender\" : \"Neutral\",\n\t\"age\" : \"over8\",\n\t\"price\" : 19.95,\n\t\"availability\" : \"InStock\",\n\t\"quantity\" : 1\n\t}]\n}\n\t\n\t\t\t\n\t\t\n\t\t\n\t\t\n\t}]\n}"
 				},
 				"url": {
-					"raw": "http://178.128.21.208/api/order/",
+					"raw": "http://178.128.21.202/api/order/",
 					"protocol": "http",
 					"host": [
 						"178",
 						"128",
 						"21",
-						"208"
+						"202"
 					],
 					"path": [
 						"api",
@@ -94,13 +94,13 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://178.128.21.208/api/toy/15",
+					"raw": "http://178.128.21.202/api/toy/15",
 					"protocol": "http",
 					"host": [
 						"178",
 						"128",
 						"21",
-						"208"
+						"202"
 					],
 					"path": [
 						"api",
@@ -154,13 +154,13 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://178.128.21.208/api/toy/16",
+					"raw": "http://178.128.21.202/api/toy/16",
 					"protocol": "http",
 					"host": [
 						"178",
 						"128",
 						"21",
-						"208"
+						"202"
 					],
 					"path": [
 						"api",
