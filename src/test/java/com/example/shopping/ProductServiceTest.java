@@ -40,4 +40,13 @@ public class ProductServiceTest {
         Assertions.assertThat(actualToy).isNotNull();
         Assertions.assertThat(actualToy).isEqualTo(expectedToy);
     }
+
+    @Test
+    public void whenSearchByInvalidToyIdShouldReturnNull() {
+        Mockito.when(toyRepository.findById(ArgumentMatchers.anyInt())).thenReturn(Optional.empty());
+
+        Toy actualToy = productservice.getProduct(-1);
+
+        Assertions.assertThat(actualToy).isNull();
+    }
 }

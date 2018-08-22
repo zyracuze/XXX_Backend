@@ -11,13 +11,12 @@ public class Toy implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
     private String brand;
-
     private String gender;
     private String age;
     private double price;
     private String availability;
+    @Transient
     private int quantity;
 
     public int getId() {

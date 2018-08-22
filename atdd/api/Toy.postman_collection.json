@@ -6,6 +6,52 @@
 	},
 	"item": [
 		{
+			"name": "TestAPIPlaceOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9c8b02da-ed6d-48be-a3d4-74068f162850",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"orders\": {\n\t\t\"full_name\" : \"BHAJAN PREET SINGH\",\n\t\t\"address1\" : \"WING-3, 101, KHARADI\",\n\t\t\"address2\" : \"PUNE\",\n\t\t\"city\" : \"PUNE\",\n\t\t\"province\" : \"MAHARASHTRA\",\n\t\t\"post_code\" : \"4110014\"\n\t},\n\t\"toyList\":[{ \"id\" : 15,\n\t\"brand\" : \"CoolKidz\",\n\t\"gender\" : \"Male\",\n\t\"age\" : \"over8\",\n\t\"price\" : 24.95,\n\t\"availability\" : \"InStock\",\n\t\"quantity\" : 1\n\t},\n\t{ \n\t\t\"id\" : 16,\n\t\"brand\" : \"GeekToys\",\n\t\"gender\" : \"Neutral\",\n\t\"age\" : \"over8\",\n\t\"price\" : 19.95,\n\t\"availability\" : \"InStock\",\n\t\"quantity\" : 1\n\t}]\n}\n\t\n\t\t\t\n\t\t\n\t\t\n\t\t\n\t}]\n}"
+				},
+				"url": {
+					"raw": "http://178.128.21.208/api/order/",
+					"protocol": "http",
+					"host": [
+						"178",
+						"128",
+						"21",
+						"208"
+					],
+					"path": [
+						"api",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "TestAPIProductDetail_Sailboat",
 			"event": [
 				{
