@@ -17,7 +17,6 @@ public class OrderServiceTest {
         Orders orders = new Orders();
         List<Toy> toyList = new ArrayList<Toy>();
         Toy toy = new Toy();
-        toy
         toyList.add(toy);
         orders.setFull_name("");
         orders.setAddress1("");

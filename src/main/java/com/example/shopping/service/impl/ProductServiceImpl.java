@@ -1,5 +1,6 @@
 package com.example.shopping.service.impl;
 
+import com.example.shopping.domain.Toy;
 import com.example.shopping.repository.ToyRepository;
 import com.example.shopping.service.ProductService;
 import org.springframework.stereotype.Service;
