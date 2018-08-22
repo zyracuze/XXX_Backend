@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "eed5363e-2bdc-4698-9553-122fd3acb47b",
+		"name": "Toy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestAPIProductDetail_Sailboat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ce8f8ba9-0006-41a9-99f5-aa2aee18beb2",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = pm.response.json()",
+							"pm.test(\"Test Product Sailboat ID\", function () {",
+							"    pm.expect(jsonData.id).to.eql(15);",
+							"});",
+							"",
+							"pm.test(\"Test Product Sailboat Name\", function () {",
+							"    pm.expect(jsonData.name).to.eql(\"Sailboat\");",
+							"});",
+							"",
+							"pm.test(\"Test Product Sailboat Brand\", function () {",
+							"    pm.expect(jsonData.brand).to.eql(\"CoolKidz\");",
+							"});",
+							"",
+							"pm.test(\"Test Product Sailboat Age\", function () {",
+							"    pm.expect(jsonData.age).to.eql(\"over8\");",
+							"});",
+							"",
+							"pm.test(\"Test Product Sailboat Price\", function () {",
+							"    pm.expect(jsonData.price).to.eql(24.95);",
+							"});",
+							"",
+							"pm.test(\"Test Product Sailboat Qty\", function () {",
+							"    pm.expect(jsonData.Qty).to.eql(1);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://178.128.21.208/api/toy/15",
+					"protocol": "http",
+					"host": [
+						"178",
+						"128",
+						"21",
+						"208"
+					],
+					"path": [
+						"api",
+						"toy",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAPIProductDetail_Scrabble",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ae5263a-9a81-4ae7-a538-e8418fd1a52b",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = pm.response.json()",
+							"pm.test(\"Test Product Scrabble ID\", function () {",
+							"    pm.expect(jsonData.id).to.eql(16);",
+							"});",
+							"",
+							"pm.test(\"Test Product Scrabble Name\", function () {",
+							"    pm.expect(jsonData.name).to.eql(\"Scrabble\");",
+							"});",
+							"",
+							"pm.test(\"Test Product Scrabble Brand\", function () {",
+							"    pm.expect(jsonData.brand).to.eql(\"GeekToys\");",
+							"});",
+							"",
+							"pm.test(\"Test Product Scrabble Age\", function () {",
+							"    pm.expect(jsonData.age).to.eql(\"over8\");",
+							"});",
+							"",
+							"pm.test(\"Test Product Scrabble Price\", function () {",
+							"    pm.expect(jsonData.price).to.eql(19.95);",
+							"});",
+							"",
+							"pm.test(\"Test Product Scrabble Qty\", function () {",
+							"    pm.expect(jsonData.Qty).to.eql(1);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://178.128.21.208/api/toy/16",
+					"protocol": "http",
+					"host": [
+						"178",
+						"128",
+						"21",
+						"208"
+					],
+					"path": [
+						"api",
+						"toy",
+						"16"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
