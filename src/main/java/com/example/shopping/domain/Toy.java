@@ -1,17 +1,19 @@
 package com.example.shopping.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class Toy {
+@Table(name = "PRODUCTS")
+public class Toy implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     private String brand;
+
     private String gender;
     private String age;
     private double price;
