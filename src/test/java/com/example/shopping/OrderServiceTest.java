@@ -1,11 +1,11 @@
 package com.example.shopping;
 
 import com.example.shopping.domain.Order;
-import com.example.shopping.domain.Result;
 import org.junit.Test;
 import service.OrderService;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class OrderServiceTest {
 
@@ -14,13 +14,22 @@ public class OrderServiceTest {
     @Test
     public void saveOrderSuccess() {
 
-        Result expectedResult = new Result();
-        expectedResult.setSuccess
-
         Order order = new Order();
-        Result actualResult = orderService.saveOrder(order);
+        List<Toy> toyList = new ArrayList<Toy>();
+        Toy toy = new Toy();
+        toyList.add(toy);
+        ShippingDetail shipping = new ShippingDetail();
+        shipping.setFullName();
+        shipping.setAddress1();
+        shipping.setAddress2();
+        shipping.setCity();
+        shipping.setProvince();
+        shipping.setPostCode();
+        order.setShippingDetail(shipping);
+        order.setToyList(toyList);
+        boolean actualResult = orderService.saveOrder(order);
 
-        assertEquals(expectedResult, actualResult);
+        assertTrue(actualResult);
 
     }
 
